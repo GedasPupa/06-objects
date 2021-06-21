@@ -51,7 +51,15 @@ document.getElementById('count').addEventListener('click', function() {
     const output1 = calculator.average();
     document.getElementById('output').innerText = `[ ${output} ]`;
     document.getElementById('output1').innerText = output1;
+    // for (let i=0; i<objektuMasyvas.length; i++) {
+    //     document.getElementById('output2').innerText += "{id: " + objektuMasyvas[i].id + ', vardas: ' + objektuMasyvas[i].vardas + "}" + '\r\n';
+    // }
     for (let i=0; i<objektuMasyvas.length; i++) {
-        document.getElementById('output2').innerText += "{id: " + objektuMasyvas[i].id + ', vardas: ' + objektuMasyvas[i].vardas + "}" + '\r\n';
+        let divas = document.createElement('div');
+        divas.innerText = "{id: " + objektuMasyvas[i].id + ', vardas: ' + objektuMasyvas[i].vardas + "}";
+        if ((i+1) % 2 == 0) {
+            divas.style.backgroundColor = "lightblue";
+        }
+        document.getElementById('output2').append(divas);
     }
 });

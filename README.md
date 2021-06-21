@@ -13,7 +13,7 @@ _Educational project_
 - [x] Id reikšmė = 1, 2 ir t.t.
 
 #### Papildomai:
-- [ ] Pagal sukurtą obejktų masyvą, sukurti tiek pat div elementų, kuriuose išvedamas id ir vardas. Kas antras div - mėlynas.
+- [x] Pagal sukurtą obejktų masyvą, sukurti tiek pat div elementų, kuriuose išvedamas id ir vardas. Kas antras div - mėlynas.
 
 ### 3. Susikurti objektą "Kvadratas".
 - [ ] Objektas turi priimti du kintamuosius: a ir b kraštines. Sukurti du metodus, kurie skaičiuoja kvadrato plotą perimetrą, įstrižainės ilgį. Informaciją išvesti į <p> žymę.
