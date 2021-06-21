@@ -80,4 +80,9 @@ document.getElementById('count2').addEventListener('click', function() {
         'Plotas: ' + rectangle.area() + '\r\n' +
         'Perimetras: ' + rectangle.perimeter() + '\r\n' +
         'Įžambinė: ' + rectangle.diagonal();
+    let staciakampis = document.createElement('div');
+    staciakampis.style.width = `${rectangle.top}px`;
+    staciakampis.style.height = `${rectangle.left}px`;
+    staciakampis.style.border = "2px solid green";
+    document.getElementsByTagName("body")[0].append(staciakampis);
 })
