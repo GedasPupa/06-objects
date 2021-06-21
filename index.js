@@ -51,9 +51,6 @@ document.getElementById('count').addEventListener('click', function() {
     const output1 = calculator.average();
     document.getElementById('output').innerText = `[ ${output} ]`;
     document.getElementById('output1').innerText = output1;
-    // for (let i=0; i<objektuMasyvas.length; i++) {
-    //     document.getElementById('output2').innerText += "{id: " + objektuMasyvas[i].id + ', vardas: ' + objektuMasyvas[i].vardas + "}" + '\r\n';
-    // }
     for (let i=0; i<objektuMasyvas.length; i++) {
         let divas = document.createElement('div');
         divas.innerText = "{id: " + objektuMasyvas[i].id + ', vardas: ' + objektuMasyvas[i].vardas + "}";
@@ -63,3 +60,24 @@ document.getElementById('count').addEventListener('click', function() {
         document.getElementById('output2').append(divas);
     }
 });
+
+const rectangle = {
+    area: function() {
+        return this.top * this.left;
+    },
+    perimeter: function() {
+        return this.top * 2 + this.left * 2;
+    },
+    diagonal: function() {
+        return Math.sqrt(this.top**2 + this.left**2);
+    }
+}
+
+document.getElementById('count2').addEventListener('click', function() {
+    rectangle.top = parseFloat(document.getElementById('input3').value);
+    rectangle.left = parseFloat(document.getElementById('input4').value);
+    document.getElementById('pText').innerText = 
+        'Plotas: ' + rectangle.area() + '\r\n' +
+        'Perimetras: ' + rectangle.perimeter() + '\r\n' +
+        'Įžambinė: ' + rectangle.diagonal();
+})
